@@ -1,0 +1,24 @@
+TEAM_SNIPER = DarkRP.createJob("Swat SNIPER", {
+    color = Color(158, 157, 255, 255),
+    model = {"models/player/urban.mdl"},
+    description = [[You need to disbaned rto the roof tops to protect the mayor]],
+    weapons = {},
+    command = "SWATL",
+    max = 1,
+    salary = 2500,
+    admin = 0,
+    vote = true,
+    hasLicense = true,
+    candemote = true,
+    category = "Government",
+    NeedToChangeFrom = TEAM_CITIZENS,
+    ammo = {
+        ["pistol"] = 0
+    },
+    PlayerSpawn = function(ply)
+        ply:SetMaxHealth(100)
+        ply:SetHealth(100)
+        ply:SetArmor(250)
+        ply:SetBodygroup(6, 6)
+    end
+})
